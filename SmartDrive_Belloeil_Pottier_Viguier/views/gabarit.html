@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>IHM Drive</title>
 	<link rel="stylesheet" href="../css/foundation.css" />
+	<link rel="stylesheet" href="../css/drivestyles.css" />
+	
 	<script src="js/vendor/modernizr.js"></script>
 
 </head>
@@ -15,7 +17,7 @@
 
 <br>
 
-<div name=header" class="row collapse">
+<div name=header" class="row">
 
 	<div name="logo" class="large-2 columns">
 		<img height="200px" width="200px" alt="Logo" src="../img/LogoIHMDrive.jpg">
@@ -25,14 +27,14 @@
 		<form name="research" action="#">
 			<div class="row">
 				<div class="large-12 columns">
-				<div class="row collapse">
-					<div class="small-10 columns">
-						<input type="text" placeholder="Cherchez un article">
+					<div class="row collapse">
+						<div class="small-10 columns">
+							<input type="text" placeholder="Cherchez un article">
+						</div>
+						<div class="small-2 columns">
+							<a href="#" class="button postfix">Go</a>
+						</div>
 					</div>
-					<div class="small-2 columns">
-						<a href="#" class="button postfix">Go</a>
-					</div>
-				</div>
 				</div>
 			</div>
 		</form>
@@ -40,8 +42,8 @@
 	
 	<div name="login" class="large-4 columns">
 		<ul class="button-group round">
-			<li><a href="#" class="small button info">Sign Up</a></li>
-			<li><a href="#" class="small button info">Sign In</a></li>
+			<li><a href="#" class="small button info">Incription</a></li>
+			<li><a href="#" class="small button info">Connexion</a></li>
 		</ul>
 	</div>
 	
@@ -72,8 +74,6 @@
 		</div>
 	</div>
 	
-	
-	
 	<div name="dynamic_content">
 		<div class="large-8 columns">
 			Contenu
@@ -88,33 +88,21 @@
 	
 </div>
 
-<div name="footer" class="row collapse">
+<div id="footer" class="row collapse" style="font-size: 80%;">
 
-	<div name="aboutUs" class="large-4 columns">
-		<p>
-			<small>
-				Ce site a été développé dans le cadre des UE "Design Graphique",
-				"Technologies Web", "Génie des systèmes interactifs" et "Techniques d'interaction web" du M2 Interactions Homme-Machine.
-			</small>
-		</p>
+	<div id="about_us" class="large-4 columns text-justify">
+		Ce site a été développé dans le cadre des UE "Design Graphique",
+		"Technologies Web", "Génie des systèmes interactifs" et "Techniques d'interaction web" du M2 Interactions Homme-Machine.
 	</div>
 	
-	<div name="about_drive" class="large-4 columns">
-		<h3>
-			<small>
-				Drive sélectionné : <br>
-				Adresse : <br>
-				Horaires d'ouverture : <br>
-			</small>
-		</h3>
+	<div id="about_drive" class="large-4 large-offset-1 columns">
+		Drive sélectionné : <br>
+		Adresse : <br>
+		Horaires d'ouverture : <br>
 	</div>
 	
-	<div name="legal" class="large-4 columns">
-		<p>
-			<small>
-				Ce site n'est pas distribué sous licence.
-			</small>
-		</p>
+	<div id="legal" class="large-2 large-offset-1 columns">
+		Ce site n'est pas distribué sous licence.
 	</div>
 	
 </div>
