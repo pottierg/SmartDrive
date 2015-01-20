@@ -1201,9 +1201,9 @@ button, .button {
     button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
       color: #FFFFFF; }
   button.info, .button.info {
-    background-color: #a0d3e8;
+    background-color: #008FB3;
     border-color: #61b6d9;
-    color: #333333; }
+    color: #FFFFFF; }
     button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
       background-color: #61b6d9; }
     button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
