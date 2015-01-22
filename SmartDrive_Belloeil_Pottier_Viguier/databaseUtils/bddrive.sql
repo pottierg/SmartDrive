@@ -2,6 +2,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
+DROP SCHEMA IF EXISTS `bddrive` ;
 CREATE SCHEMA IF NOT EXISTS `bddrive` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `bddrive` ;
 
@@ -9,10 +10,11 @@ USE `bddrive` ;
 -- Table `bddrive`.`Rayon`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bddrive`.`Rayon` (
-  `idRayon` INT NOT NULL,
+  `idRayon` INT NOT NULL AUTO_INCREMENT,
   `nomRayon` VARCHAR(45) NOT NULL,
   `imageRayon` BLOB NOT NULL,
   `couleurRayon` VARCHAR(45) NOT NULL,
+  `couleurCompRayon` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idRayon`))
 ENGINE = InnoDB;
 
@@ -21,10 +23,10 @@ ENGINE = InnoDB;
 -- Table `bddrive`.`Produit`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bddrive`.`Produit` (
-  `idProduit` INT NOT NULL,
+  `idProduit` INT NOT NULL AUTO_INCREMENT,
   `nomProduit` VARCHAR(45) NOT NULL,
   `imageProduit` BLOB NOT NULL,
-  `descriptionProduit` VARCHAR(45) NOT NULL,
+  `descriptionProduit` VARCHAR(300) NOT NULL,
   `prixProduit` INT NOT NULL,
   `nombreProduit` INT NOT NULL,
   `Rayon_idRayon` INT NOT NULL,
@@ -42,7 +44,7 @@ ENGINE = InnoDB;
 -- Table `bddrive`.`Adresse`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bddrive`.`Adresse` (
-  `idAdresse` INT NOT NULL,
+  `idAdresse` INT NOT NULL AUTO_INCREMENT,
   `numeroAdresse` INT NOT NULL,
   `rueAdresse` VARCHAR(45) NOT NULL,
   `villeAdresse` VARCHAR(45) NOT NULL,
@@ -56,7 +58,7 @@ ENGINE = InnoDB;
 -- Table `bddrive`.`Drive`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bddrive`.`Drive` (
-  `idDrive` INT NOT NULL,
+  `idDrive` INT NOT NULL AUTO_INCREMENT,
   `nomDrive` VARCHAR(45) NOT NULL,
   `Adresse_idAdresse` INT NOT NULL,
   PRIMARY KEY (`idDrive`),
@@ -73,7 +75,7 @@ ENGINE = InnoDB;
 -- Table `bddrive`.`Client`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bddrive`.`Client` (
-  `idClient` INT NOT NULL,
+  `idClient` INT NOT NULL AUTO_INCREMENT,
   `emailClient` VARCHAR(45) NOT NULL,
   `mdpClient` VARCHAR(45) NOT NULL,
   `nomClient` VARCHAR(45) NOT NULL,
@@ -93,7 +95,7 @@ ENGINE = InnoDB;
 -- Table `bddrive`.`Commande`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bddrive`.`Commande` (
-  `idCommande` INT NOT NULL,
+  `idCommande` INT NOT NULL AUTO_INCREMENT,
   `dateCommande` DATETIME NOT NULL,
   `Drive_idDrive` INT NOT NULL,
   `Client_idClient` INT NOT NULL,
