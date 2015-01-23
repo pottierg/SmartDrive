@@ -12,13 +12,12 @@
 	<title><?php echo $titre; ?></title>
 	<link rel="stylesheet" href="../css/foundation.css" />
 	<link rel="stylesheet" href="../css/drivestyles.css" />
+	<link rel="stylesheet" href="../utils/slick/slick.css"/>
 	
 	<script src="js/vendor/modernizr.js"></script>
 
 </head>
-
 <body>
-
 <br>
 
 <div id=header" class="row">

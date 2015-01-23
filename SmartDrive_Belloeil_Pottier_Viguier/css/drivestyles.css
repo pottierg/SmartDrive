@@ -94,11 +94,11 @@ html, body {
 }
 
 .clear_box_panier {
-	height: 18em;
+	height: 20em;
 	color: black;
 	background-color: rgb(240,240,255);
 	border-style: solid;
-	border: 5px;
+	border-width: 2px;
 	border-color: rgb(18,138,220);
 }
 
@@ -107,5 +107,5 @@ html, body {
 }
 
 .panier {
-	height: 14em;
+	height: 16em;
 }

@@ -1,47 +1,39 @@
 <?php
 	// Contenu de la page d'accueil (choix du drive)
 ?>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../utils/slick/slick.min.js"></script>
+
 <div class="orbit-container">
-	<ul data-orbit class="example-orbit orbit-slides-container">
-		<li class="active">
-			<img src="./../img/LogoIHMDrive.jpg" alt="slide 1" />
+	<div id="slides" class="example-orbit">
+	    <div>
+			<img src="../img/Banniere1.png" alt="slide 1" />
 			<div class="orbit-caption">
-				Promotion !
+				Il ya bien une chose qui ne peut battre les Croustibat : nos prix !
 			</div>
-		</li>
-		<li>
-			<img src="./../img/LogoIHMDrive.jpg" alt="slide 2" />
+	    </div>
+	    <div>
+			<img src="../img/Banniere2.png" alt="slide 2" />
 			<div class="orbit-caption">
-				Promotion !
+	        	Laisse tomber les P&eacutepitos, on a des Granolas !
 			</div>
-		</li>
-		<li>
-			<img src="./../img/LogoIHMDrive.jpg" alt="slide 3" />
-			<div class="orbit-caption">
-				Promotion ! 
-			</div>
-		</li>
-	</ul>
-	
-	<!-- Navigation Arrows -->
-	<a href="#" class="orbit-prev">Pr&eacutec&eacutedent <span></span></a>
-	<a href="#" class="orbit-next">Suivant <span></span></a>
-	
-	<!-- Slide Numbers -->
-	<div class="orbit-slide-number">
-		<span>1</span> of <span>3</span>
-	</div>
-	 
-	 <!-- Timer and Play/Pause Button -->
-	<div class="orbit-timer">
-		<span></span>
-		<div class="orbit-progress"></div>
+	    </div>
+	    <div>
+	      	<img src="../img/Banniere3.png" alt="slide 3" />
+	      	<div class="orbit-caption">
+	        	Au bon lait UHT !
+	      	</div>
+	    </div>
 	</div>
 </div>
 
-<!-- Bullets -->
-<ol class="orbit-bullets">
-	<li data-orbit-slide-number="1"  class="active"></li>
-	<li data-orbit-slide-number="2"></li>
-	<li data-orbit-slide-number="3"></li>
-</ol>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#slides').slick({
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 1800
+		});
+	});
+</script>
