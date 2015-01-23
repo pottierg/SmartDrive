@@ -7,15 +7,11 @@ $db = 'bddrive';
 $host = 'localhost';
 $port = 8889;
 
-$link = mysql_connect(
-   "$host:$port", 
+$link = mysqli_connect(
+   $host, 
    $user, 
-   $password
-);
-
-$db_selected = mysql_select_db(
-   $db, 
-   $link
+   $password,
+   $db
 );
 
 ?>
@@ -35,7 +31,7 @@ $db_selected = mysql_select_db(
   	<div class="wrapper">
 
 		  <div class="header">
-				<div class="row">
+			  <div class="row">
 				  <div class="large-12 columns">
 				  	<center>
 				  		<h1>IHM Drive</h1>
@@ -68,6 +64,29 @@ $db_selected = mysql_select_db(
 						<div class="row" id="result_drive_search">
 
 							<!-- Insérer le contenu dynamique lié a la recherche -->
+							<?php
+
+								echo "ok";
+							
+								/*if(isset($_POST['submit']))
+								{
+									$search = mysql
+									
+									if(empty($search))
+									{
+										echo "";
+									} else {
+										echo "";
+									}*/
+									
+									$req = mysqli_query($link, 'SELECT `codePostalAdresse`, `villeAdresse`, `numeroAdresse`, `rueAdresse` FROM `adresse`');
+									
+									while($data = mysqli_fetch_assoc($req))
+									{
+										echo '<b>'.$data['codePostalAdresse'].' '.$data['villeAdresse'].'</b>'.$data['numeroAdresse'].' '.$data['rueAdresse'].'<br/>';
+									}
+								/*}*/
+							?>
 							
 						</div>
 						<div class="row" id="footer_drive_search" >
@@ -105,5 +124,8 @@ $db_selected = mysql_select_db(
 		  	</div>
 	  	</div>
 	  </div>
+	  <?php
+		mysql_close(); 
+	  ?>
   </body>
 </html>
