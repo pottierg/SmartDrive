@@ -1,11 +1,15 @@
+<?php 
+	session_start();
+	$content = $_SESSION['section'];
+	$titre = $_SESSION['titre']
+?>
 <!DOCTYPE html>
 <html lang="fr">
- 
  <head>
  
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>IHM Drive</title>
+	<title><?php echo $titre; ?></title>
 	<link rel="stylesheet" href="../css/foundation.css" />
 	<link rel="stylesheet" href="../css/drivestyles.css" />
 	
@@ -17,13 +21,13 @@
 
 <br>
 
-<div name=header" class="row">
+<div id=header" class="row">
 
-	<div name="logo" class="large-2 columns">
+	<div id="logo" class="large-2 columns">
 		<img height="200px" width="200px" alt="Logo" src="../img/LogoIHMDrive.jpg">
 	</div>
 	
-	<div name="research" class="large-6 columns">
+	<div id="research" class="large-6 columns">
 		<form name="research" action="#">
 			<div class="row">
 				<div class="large-12 columns">
@@ -40,7 +44,7 @@
 		</form>
 	</div>
 	
-	<div name="login" class="large-4 columns">
+	<div id="login" class="large-4 columns">
 		<ul class="button-group round">
 			<li><a href="#" class="small button info">Incription</a></li>
 			<li><a href="#" class="small button info">Connexion</a></li>
@@ -50,7 +54,7 @@
 </div>
 
 
-<div name="content" class="row collapse">
+<div id="content" class="row collapse content">
 
 	<div name="navbar">
 	    <div class="large-12 columns">
@@ -62,9 +66,9 @@
 		</div>
 	</div>
 
-	<div name="menubar">
-		<div class="large-2 columns">
-			<ul class="stack button-group">
+	<div id="row">
+		<div name="menubar" class="large-2 columns">
+			<ul class="stack button-group radius">
 				<li><a href="#" class="button">Rayons</a></li>
 				<li><a href="#" class="button">Promotions</a></li>
 				<li><a href="#" class="button">Informations</a></li>
@@ -72,17 +76,22 @@
 				<li><a href="#" class="button">Compte utilisateur</a></li>
 			</ul>
 		</div>
-	</div>
-	
-	<div name="dynamic_content">
-		<div class="large-8 columns">
-			Contenu
+		
+		<div name="dynamic_content" class="large-8 columns">
+			<?php 
+				include $_SESSION['section'];
+			?>
 		</div>
-	</div>
-	
-	<div name="panier">
-		<div class="large-2 columns">
-			
+		
+		<div id="panier" class="large-2 columns clear_box_panier">
+			<div id="content_panier" class="panier auto_scroll">
+				
+			</div>
+			<div id="checkout_button" class="row">
+				<div class="large-12 columns">
+					<a href="#" class="button radius mid_align">R&eacutegler</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	
@@ -91,18 +100,18 @@
 <div id="footer" class="row collapse" style="font-size: 80%;">
 
 	<div id="about_us" class="large-4 columns text-justify">
-		Ce site a été développé dans le cadre des UE "Design Graphique",
-		"Technologies Web", "Génie des systèmes interactifs" et "Techniques d'interaction web" du M2 Interactions Homme-Machine.
+		Ce site a &eacutet&eacute d&eacutevelopp&eacute dans le cadre des UE "Design Graphique",
+		"Technologies Web", "G&eacutenie des syst&egravemes interactifs" et "Techniques d'interaction web" du M2 Interactions Homme-Machine.
 	</div>
 	
 	<div id="about_drive" class="large-4 large-offset-1 columns">
-		Drive sélectionné : <br>
+		Drive s&eacutelectionn&eacute : <br>
 		Adresse : <br>
 		Horaires d'ouverture : <br>
 	</div>
 	
 	<div id="legal" class="large-2 large-offset-1 columns">
-		Ce site n'est pas distribué sous licence.
+		Ce site n'est pas distribu&eacute sous licence. Il utilise le framework Foundation 5.
 	</div>
 	
 </div>
