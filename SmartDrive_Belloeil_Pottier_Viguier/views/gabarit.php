@@ -9,6 +9,7 @@
  
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="../img/Logo.ico">
 	<title><?php echo $titre; ?></title>
 	<link rel="stylesheet" href="../css/foundation.css" />
 	<link rel="stylesheet" href="../css/drivestyles.css" />
@@ -21,7 +22,7 @@
 <div id=header" class="row">
 
 	<div id="logo" class="large-2 columns">
-		<img height="200px" width="200px" alt="Logo" src="../img/LogoIHMDrive.png">
+		<img height="300px" width="200px" alt="Logo" src="../img/Logotype-01.png">
 	</div>
 	
 	<div id="research" class="large-6 columns">
