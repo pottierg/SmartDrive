@@ -14,8 +14,6 @@
 	<link rel="stylesheet" href="../css/drivestyles.css" />
 	<link rel="stylesheet" href="../utils/slick/slick.css"/>
 	
-	<script src="js/vendor/modernizr.js"></script>
-
 </head>
 <body>
 <br>
@@ -23,7 +21,7 @@
 <div id=header" class="row">
 
 	<div id="logo" class="large-2 columns">
-		<img height="200px" width="200px" alt="Logo" src="../img/LogoIHMDrive.jpg">
+		<img height="200px" width="200px" alt="Logo" src="../img/LogoIHMDrive.png">
 	</div>
 	
 	<div id="research" class="large-6 columns">
@@ -66,13 +64,28 @@
 	</div>
 
 	<div id="row">
-		<div name="menubar" class="large-2 columns">
-			<ul class="stack button-group radius">
-				<li><a href="#" class="button">Rayons</a></li>
-				<li><a href="#" class="button">Promotions</a></li>
-				<li><a href="#" class="button">Informations</a></li>
-				<li><a href="#" class="button">Panier</a></li>
-				<li><a href="#" class="button">Compte utilisateur</a></li>
+		<div name="menubar radius" class="large-2 columns">
+		
+			<ul class="side-nav stack button-group radius" role="navigation">
+				<li role="menuitem">
+					
+				<a href="#" data-options="align:right" data-dropdown="rayons" class="button dropdown">Rayons</a>
+				<div id="rayons" class="f-dropdown large content" data-dropdown-content>
+					<ul class="large-block-grid-3">
+						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Produits frais</a></li>
+						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Fruits et l&eacutegumes</a></li>
+						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Epicerie</a></li>
+						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Boissons</a></li>
+						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Surgel&eacutes</a></li>
+						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Hygi&egravene</a></li>
+					</ul>
+				</div>
+					
+				</li>
+				<li role="menuitem"><a href="#" class="button">Promotions</a></li>
+				<li role="menuitem"><a href="#" class="button">Informations</a></li>
+				<li role="menuitem"><a href="#" class="button">Panier</a></li>
+				<li role="menuitem"><a href="#" class="button">Compte utilisateur</a></li>
 			</ul>
 		</div>
 		
@@ -115,5 +128,12 @@
 	
 </div>
 
+<!-- <script src="../js/vendor/jquery.js"></script> -->
+<script src="../js/foundation.min.js"></script>
+<script>
+	$(document).foundation();
+</script>
+
+</body>
 </body>
 </html>

@@ -20,10 +20,10 @@
 			</div>
 	    </div>
 	    <div>
-	      	<img src="../img/Banniere3.png" alt="slide 3" />
-	      	<div class="orbit-caption">
-	        	Au bon lait UHT !
-	      	</div>
+      	<img src="../img/Banniere3.png" alt="slide 3" />
+      	<div class="orbit-caption">
+        		Au bon lait UHT !
+      	</div>
 	    </div>
 	</div>
 </div>
