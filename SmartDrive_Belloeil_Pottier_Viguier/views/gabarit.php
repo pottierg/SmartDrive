@@ -53,7 +53,14 @@
 	</div>
 	<?php else: ?>
 	<div id="login" class="large-4 columns">
-		Bienvenue <?php echo $_SESSION['username'].' !';?>
+		<div class="row">
+			<div class="small-6 columns">
+				Bienvenue <?php echo $_SESSION['username'].' !';?>
+			</div>
+			<div class="small-6 columns">
+				<a href="../forms/deconnexion.php" class="small radius button">D&eacuteconnexion</a>
+			</div>
+		</div>
 	</div>
 	<?php endif; ?>
 	
@@ -110,7 +117,7 @@
 			</div>
 			<div id="checkout_button" class="row">
 				<div class="large-12 columns">
-					<a href="#" class="button radius mid_align">R&eacutegler</a>
+					<a href="#" class="button radius expand mid_align">R&eacutegler</a>
 				</div>
 			</div>
 		</div>
