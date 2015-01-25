@@ -1,18 +1,16 @@
 <?php
 
-$user = 'root';
-$password = 'root';
+include_once '../databaseUtils/constantes.php';
+include_once '../databaseUtils/Database.class.php';
+$user = USERNAME;
+$password = PASSWORD;
 
-$db = 'bddrive';
-$host = 'localhost';
+$db = DATABASE_NAME;
+$host = SERVER;
 $port = 8889;
 
-$link = mysqli_connect(
-   $host, 
-   $user, 
-   $password,
-   $db
-);
+$db = new Database();
+$link = $db->connectToDatabase(SERVER, DATABASE_NAME, USERNAME, PASSWORD);
 
 ?>
 
@@ -137,7 +135,7 @@ $link = mysqli_connect(
 	  	</div>
 	  </div>
 	  <?php
-		mysql_close(); 
+		$db->closeConnection();
 	  ?>
   </body>
 </html>
