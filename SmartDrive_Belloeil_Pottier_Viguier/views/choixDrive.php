@@ -34,7 +34,7 @@ $link = mysqli_connect(
 			  <div class="row">
 				  <div class="large-12 columns">
 				  	<center>
-				  		<h1>IHM Drive</h1>
+				  		<img height="70%" width="70%" alt="Logo" src="../img/Logotype-01.png">
 				  	</center>
 				  </div>
 			  </div>
@@ -42,57 +42,69 @@ $link = mysqli_connect(
 
 		  <div class="content">
 		  	<div class="row">
-					<div class="large-10 large-offset-1 columns" id="drive_search">
-						<div class="row" id="header_drive_search">
-							<center>
-								<form name="research" action="#">
-									<div class="row">
-										<div class="large-6 large-offset-3 columns">
-											<div class="row collapse" id="bar_drive_search">
-												<div class="small-10 columns">
-													<input type="text" placeholder="Code postal, ville, adresse, ...">
-												</div>
-												<div class="small-2 columns">
-													<a href="#" class="button postfix">Go</a>
-												</div>
+				<div class="large-10 large-offset-1 columns" id="drive_search">
+					<div class="row" id="header_drive_search">
+						<center>
+							<form action="#" method="post">
+								<div class="row">
+									<div class="large-6 large-offset-3 columns">
+										<div class="row collapse" id="bar_drive_search">
+											<div class="small-10 columns">
+												<input type="text" name="research" placeholder="Code postal, ville, adresse, ...">
+											</div>
+											<div class="small-2 columns">
+												<button type="submit" class="postfix">Search</a>
 											</div>
 										</div>
 									</div>
-								</form>
-							</center>
-						</div>
-						<div class="row" id="result_drive_search">
+								</div>
+							</form>
+						</center>
+					</div>
+					<div class="row" id="content_drive_search">
+						<?php
+							if(isset($_POST['research'])) {
+								$sql = "SELECT * FROM `Adresse` WHERE `villeAdresse` LIKE \"%".$_POST['research']."%\" ".
+								"OR `codePostalAdresse` LIKE \"%".$_POST['research']."%\" ".
+								"OR `rueAdresse` LIKE \"%".$_POST['research']."%\" ".
+								"AND `idAdresse` IN (SELECT `Adresse_idAdresse` FROM Drive)";
+							} else {
+								$sql = "SELECT * FROM `Adresse` WHERE `idAdresse` IN (SELECT `Adresse_idAdresse` FROM Drive)";
+							}
 
-							<!-- Insérer le contenu dynamique lié a la recherche -->
-							<?php
-
-								echo "ok";
-							
-								/*if(isset($_POST['submit']))
+							if($req = mysqli_query($link, $sql)) {
+								while($data = mysqli_fetch_assoc($req))
 								{
-									$search = mysql
+									echo '<div class="row">';
+									echo '<div class="large-10 large-offset-1 columns result_drive_search">';
+									echo '<div class="row collapse">';
 									
-									if(empty($search))
-									{
-										echo "";
-									} else {
-										echo "";
-									}*/
+									echo '<div class="small-2 columns" style="padding-top: 8px; padding-bottom: 8px;">';
+									echo ''.$data['codePostalAdresse'].'';
+									echo '</div>';
+
+									echo '<div class="small-2 columns" style="padding-top: 8px; padding-bottom: 8px;">';
+									echo $data['villeAdresse'];
+									echo '</div>';
 									
-									$req = mysqli_query($link, 'SELECT `codePostalAdresse`, `villeAdresse`, `numeroAdresse`, `rueAdresse` FROM `adresse`');
+									echo '<div class="small-6 columns" style="padding-top: 8px; padding-bottom: 8px;">';
+									echo $data['numeroAdresse'].' '.$data['rueAdresse'];
+									echo '</div>';
 									
-									while($data = mysqli_fetch_assoc($req))
-									{
-										echo '<b>'.$data['codePostalAdresse'].' '.$data['villeAdresse'].'</b>'.$data['numeroAdresse'].' '.$data['rueAdresse'].'<br/>';
-									}
-								/*}*/
-							?>
-							
-						</div>
-						<div class="row" id="footer_drive_search" >
-							<!-- espace vide -->
-						</div>
-				  </div>
+									echo '<div class="small-2 columns">';
+									echo '<a href="gabarit.php" class="button small" style="margin-bottom: 0px;">Go</a>';
+									echo '</div>';
+
+									echo '</div>';
+									echo '</div>';
+									echo '</div>';
+								}
+							} else {
+								echo '<center><h3 style="color: white;">Sorry! No Drive was found :(</h3></center>';
+							}
+						?>
+					</div>
+		    	</div>
 		  	</div>
 		  	<div class="push"></div>
 		  </div>
