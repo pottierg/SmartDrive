@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	$content = $_SESSION['section'];
-	$titre = $_SESSION['titre']
+	$titre = $_SESSION['titre'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,7 +22,9 @@
 <div id=header" class="row">
 
 	<div id="logo" class="large-2 columns">
-		<img height="300px" width="200px" alt="Logo" src="../img/Logotype-01.png">
+		<a href="../index.php">
+			<img height="300px" width="200px" alt="Logo" src="../img/Logotype-01.png">
+		</a>
 	</div>
 	
 	<div id="research" class="large-6 columns">
@@ -44,8 +46,8 @@
 	
 	<div id="login" class="large-4 columns">
 		<ul class="button-group round">
-			<li><a href="#" class="small button info">Incription</a></li>
-			<li><a href="#" class="small button info">Connexion</a></li>
+			<li><a href="./gotoInscription.php" class="small button info">Inscription</a></li>
+			<li><a href="./gotoConnexion.php" class="small button info">Connexion</a></li>
 		</ul>
 	</div>
 	
@@ -92,7 +94,7 @@
 		
 		<div name="dynamic_content" class="large-8 columns">
 			<?php 
-				include $_SESSION['section'];
+				include $content;
 			?>
 		</div>
 		
@@ -129,8 +131,10 @@
 	
 </div>
 
-<!-- <script src="../js/vendor/jquery.js"></script> -->
-<script src="../js/foundation.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../utils/slick/slick.min.js"></script>
+<script type="text/javascript" src="../js/foundation.min.js"></script>
 <script>
 	$(document).foundation();
 </script>

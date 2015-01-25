@@ -7,6 +7,6 @@
 	header("Location: views/choixDrive.php");
 	
 	// Si l'utilisateur est connecté (cookies) ou a déjà choisi un drive
-	$_SESSION['titre'] = "Accueil";
+	$_SESSION['titre'] = "HCI Drive - Accueil";
 	$_SESSION['section'] = "./home.php";
 	header("Location: views/gabarit.php");

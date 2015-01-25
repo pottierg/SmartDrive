@@ -1,10 +1,3 @@
-<?php
-	// Contenu de la page d'accueil (choix du drive)
-?>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="../utils/slick/slick.min.js"></script>
-
 <div class="orbit-container">
 	<div id="slides" class="example-orbit">
 	    <div>
@@ -28,12 +21,15 @@
 	</div>
 </div>
 
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../utils/slick/slick.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#slides').slick({
 			infinite: true,
 			autoplay: true,
-			autoplaySpeed: 1800
+			autoplaySpeed: 2000
 		});
 	});
 </script>
