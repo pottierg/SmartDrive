@@ -44,12 +44,18 @@
 		</form>
 	</div>
 	
+	<?php if (!isset($_SESSION['isConnected'])) : ?>
 	<div id="login" class="large-4 columns">
 		<ul class="button-group round">
 			<li><a href="./gotoInscription.php" class="small button info">Inscription</a></li>
 			<li><a href="./gotoConnexion.php" class="small button info">Connexion</a></li>
 		</ul>
 	</div>
+	<?php else: ?>
+	<div id="login" class="large-4 columns">
+		Bienvenue <?php echo $_SESSION['username'].' !';?>
+	</div>
+	<?php endif; ?>
 	
 </div>
 
