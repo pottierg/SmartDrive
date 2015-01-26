@@ -21,13 +21,13 @@
 
 <div id=header" class="row">
 
-	<div id="logo" class="large-2 columns">
+	<div id="logo" class="large-3 columns">
 		<a href="../index.php">
-			<img height="300px" width="200px" alt="Logo" src="../img/Logotype-01.png">
+			<img height="100%" width="100%" alt="Logo" src="../img/Logotype-01.png">
 		</a>
 	</div>
 	
-	<div id="research" class="large-6 columns">
+	<div id="research" class="large-4 large-offset-1 columns" style="margin-top: 35px;">
 		<form name="research" action="#">
 			<div class="row">
 				<div class="large-12 columns">
@@ -45,14 +45,14 @@
 	</div>
 	
 	<?php if (!isset($_SESSION['isConnected'])) : ?>
-	<div id="login" class="large-4 columns">
-		<ul class="button-group round">
+	<div id="login" class="large-4 columns" style="margin-top: 30px;">
+		<ul class="button-group round" style="float: right;">
 			<li><a href="./gotoInscription.php" class="small button info">Inscription</a></li>
 			<li><a href="./gotoConnexion.php" class="small button info">Connexion</a></li>
 		</ul>
 	</div>
 	<?php else: ?>
-	<div id="login" class="large-4 columns">
+	<div id="login" class="large-4 columns" style="margin-top: 30px;">
 		<div class="row">
 			<div class="small-6 columns">
 				Bienvenue <?php echo $_SESSION['username'].' !';?>

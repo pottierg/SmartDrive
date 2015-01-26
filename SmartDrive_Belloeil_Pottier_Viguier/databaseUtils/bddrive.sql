@@ -10,7 +10,7 @@ USE `bddrive` ;
 CREATE TABLE IF NOT EXISTS `bddrive`.`Rayon` (
   `idRayon` INT NOT NULL AUTO_INCREMENT,
   `nomRayon` VARCHAR(45) NOT NULL,
-  `imageRayon` BLOB NOT NULL,
+  `imageRayon` VARCHAR(100) NOT NULL,
   `couleurRayon` VARCHAR(45) NOT NULL,
   `couleurCompRayon` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idRayon`))
@@ -23,7 +23,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `bddrive`.`Produit` (
   `idProduit` INT NOT NULL AUTO_INCREMENT,
   `nomProduit` VARCHAR(45) NOT NULL,
-  `imageProduit` BLOB NOT NULL,
+  `imageProduit` VARCHAR(100) NOT NULL,
   `descriptionProduit` VARCHAR(300) NOT NULL,
   `prixProduit` INT NOT NULL,
   `nombreProduit` INT NOT NULL,
