@@ -93,6 +93,25 @@ html, body {
 	height: 24em;
 }
 
+.articleBackground1 {
+	background-color:#E6E6FA;
+	border-style: solid;
+    border-width: 15px;
+    border-color: #008FB3;
+}
+
+.descriptionArticle{
+	color: black;
+	
+}
+
+.nomArticle{
+	color: black;
+	border-bottom: 2px solid black;
+	horizontal-align : middle;
+	width : 80%;
+}
+
 .clear_box_panier {
 	height: 20em;
 	color: black;
