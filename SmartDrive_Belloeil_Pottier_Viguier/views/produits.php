@@ -15,9 +15,9 @@
 	
 	if($req = mysqli_query($link, $sql)) {
 		while($data = mysqli_fetch_assoc($req)) : ?>
-		<div>
+		<li>
 			
-		</div>
+		</li>
 		<?php endwhile;
 	} ?>
 	</ul>
