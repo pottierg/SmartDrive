@@ -1,4 +1,9 @@
 <?php
+/***
+ * S'il y a un bug :
+ * Pas de données insérées : vérifier la transaction
+ * Redirection : vérifier $_SESSION['section']
+ */
 session_start();
 
 /*
