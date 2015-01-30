@@ -85,15 +85,15 @@
 			<ul class="side-nav stack button-group radius" role="navigation">
 				<li role="menuitem">
 					
-				<a href="#" data-options="align:right" data-dropdown="rayons" class="button dropdown">Rayons</a>
+				<a href="#" data-options="align:right; is_hover:true; hover_timeout:200" data-dropdown="rayons" class="button">Rayons</a>
 				<div id="rayons" class="f-dropdown large content" data-dropdown-content>
 					<ul class="large-block-grid-3">
-						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Produits frais</a></li>
-						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Fruits et l&eacutegumes</a></li>
-						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Epicerie</a></li>
-						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Boissons</a></li>
-						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Surgel&eacutes</a></li>
-						<li><img alt="Produits frais" src="../img/LogoIHMDrive.png"><a href="#">Hygi&egravene</a></li>
+						<li><a href="./gotoRayonProduitsFrais.php"><img alt="Produits frais" src="../img/frais.png">Produits frais</a></li>
+						<li><a href="./gotoRayonFruits.php"><img alt="Fruits et légumes" src="../img/fruitslegumes.png">Fruits et l&eacutegumes</a></li>
+						<li><a href="./gotoRayonEpicerie.php"><img alt="Epicerie" src="../img/epicerie.png">Epicerie</a></li>
+						<li><a href="./gotoRayonBoissons.php"><img alt="Boissons" src="../img/boissons.png">Boissons</a></li>
+						<li><a href="./gotoRayonSurgeles.php"><img alt="Surgelés" src="../img/surgeles.png">Surgel&eacutes</a></li>
+						<li><a href="./gotoRayonHygiene.php"><img alt="Hygiène" src="../img/hygiene.png">Hygi&egravene</a></li>
 					</ul>
 				</div>
 					
@@ -117,7 +117,7 @@
 			</div>
 			<div id="checkout_button" class="row">
 				<div class="large-12 columns">
-					<a href="#" class="button radius expand mid_align">R&eacutegler</a>
+					<a href="../forms/reglement.php" class="button radius expand mid_align">R&eacutegler</a>
 				</div>
 			</div>
 		</div>

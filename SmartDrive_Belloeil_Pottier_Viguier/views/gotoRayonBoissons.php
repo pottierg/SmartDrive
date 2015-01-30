@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-$_SESSION['titre'] = "HCI Drive - Produits Frais";
+$_SESSION['titre'] = "HCI Drive - Boissons";
 $_SESSION['section'] = "./rayon.php";
 
-$_SESSION['nomRayon'] = "Produits Frais";
+$_SESSION['nomRayon'] = "Boissons";
 
 header("Location: ./gabarit.php");
