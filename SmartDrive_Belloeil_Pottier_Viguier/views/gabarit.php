@@ -28,15 +28,15 @@
 	</div>
 	
 	<div id="research" class="large-4 large-offset-1 columns" style="margin-top: 35px;">
-		<form name="research" action="#">
+		<form method="POST" action="../forms/recherche.php">
 			<div class="row">
 				<div class="large-12 columns">
 					<div class="row collapse">
 						<div class="small-10 columns">
-							<input type="text" placeholder="Cherchez un article">
+							<input type="text" name="recherche" id="recherche" placeholder="Cherchez un article">
 						</div>
 						<div class="small-2 columns">
-							<a href="#" class="button postfix">Go</a>
+							<input type="submit" class="button postfix" value="Go">
 						</div>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 	<?php else: ?>
 	<div id="login" class="large-4 columns" style="margin-top: 30px;">
 		<div class="row">
-			<div class="small-6 columns">
+			<div class="small-6 columns" style="margin-top: 12px;">
 				Bienvenue <?php echo $_SESSION['username'].' !';?>
 			</div>
 			<div class="small-6 columns">
@@ -150,6 +150,7 @@
 <script type="text/javascript" src="../js/foundation.min.js"></script>
 <script>
 	$(document).foundation();
+	$(document).foundation('alert', 'reflow');
 </script>
 
 </body>
