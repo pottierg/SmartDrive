@@ -38,7 +38,7 @@ if($sql != "") {
 					<div class="articleBackground1">
 						<center>
 							<div class="nomArticle" ><p><b><?php echo $row['nomProduit']; ?></b></p></div>
-							<div class="imageArticle"><img src="<?php echo $row['imageProduit']; ?>" alt="image article"></div>
+							<div class="imageArticle"><img src="<?php echo $row['imageProduit']; ?>" alt="image article <?php echo $row['nomProduit']; ?>" height="100" width="150"></div>
 							<div class="descriptionArticle"><p><?php echo $row['descriptionProduit']; ?></p></div>
 							<div class="boutonAjouter"> <button type="button"><?php echo $row['prixProduit']; ?></button></div>
 						</center>
