@@ -26,7 +26,7 @@ elseif (mysqli_num_rows($req) == 1) {
 }
 else {
 	// Identification failure
-	$_SESSION['section'] = "./echecConnexion.php";
+	$_SESSION['section'] = "./echecConnexion.html";
 	$_SESSION['titre'] = "HCI Drive - Echec";
 }
 

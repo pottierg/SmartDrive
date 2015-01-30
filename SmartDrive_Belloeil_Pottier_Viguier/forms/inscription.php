@@ -6,6 +6,8 @@
  */
 session_start();
 
+
+echo print_r($_POST);
 /*
 echo $_POST['nom'];
 echo $_POST['prenom'];
@@ -37,21 +39,23 @@ if(!mysqli_query($link, $sql)) {
 	$_SESSION['titre'] = "HCI Drive - Echec";
 }
 
-$sql = "INSERT INTO `Client` (`emailClient`,`mdpClient`,`nomClient`,`prenomClient`,`idAdresse`)";
-$sql .= "VALUES (`".$_POST['mail']."`,`".md5($_POST['pwd'])."`,`".$_POST['nom']."`,`".$_POST['prenom']."`,";
+$sql = "INSERT INTO `Client` (`emailClient`,`mdpClient`,`nomClient`,`prenomClient`,`Adresse_idAdresse`) ";
+$sql .= "VALUES ('".$_POST['mail']."','".md5($_POST['pwd'])."','".$_POST['nom']."','".$_POST['prenom']."',";
 $sql .= "(SELECT idAdresse FROM Adresse WHERE telephoneAdresse=".$_POST['phone']." AND rueAdresse='".$_POST['nrue']."'))";
+
+echo $sql;
 
 if(!mysqli_query($link, $sql)) {
 	// Failure case
 	mysqli_query($link, "ROLLBACK");
-	$_SESSION['section'] = "./echecInscription.php";
+	$_SESSION['section'] = "./echecInscription.html";
 	$_SESSION['titre'] = "HCI Drive - Echec";
 }
 else {
 	// Success case
-	mysqli_query("COMMIT");
+	mysqli_query($link, "COMMIT");
 	$_SESSION['section'] = "./home.php";
 	$_SESSION['titre'] = "HCI Drive - Accueil";
 }
 
-header("Location: ../views/gabarit.php");
+//header("Location: ../views/gabarit.php");
