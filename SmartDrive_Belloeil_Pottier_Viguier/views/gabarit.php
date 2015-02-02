@@ -73,7 +73,8 @@
 	    <div class="large-12 columns">
 		    <div class="row collapse">
 				<ul class="breadcrumbs">
-					<li><a href="#">Accueil</a></li>
+					<li><a href="../index.php">Accueil</a></li>
+					<?php if(isset($_SESSION['nav'])) { echo "<li><a href='#'>".$_SESSION['nav']."</a></li>"; }?>
 				</ul>
 			</div>
 		</div>
@@ -99,9 +100,9 @@
 					
 				</li>
 				<li role="menuitem"><a href="#" class="button">Promotions</a></li>
-				<li role="menuitem"><a href="#" class="button">Informations</a></li>
+				<li role="menuitem"><a href="./gotoInformations.php" class="button">Informations</a></li>
 				<li role="menuitem"><a href="#" class="button">Panier</a></li>
-				<li role="menuitem"><a href="#" class="button">Compte utilisateur</a></li>
+				<li role="menuitem"><a href="./gotoGestionCompte.php" class="button">Compte utilisateur</a></li>
 			</ul>
 		</div>
 		
@@ -128,14 +129,25 @@
 <div id="footer" class="row collapse" style="font-size: 80%;">
 
 	<div id="about_us" class="large-4 columns text-justify">
+		<b>&Agrave propos de nous</b><br>
 		Ce site a &eacutet&eacute d&eacutevelopp&eacute dans le cadre des UE "Design Graphique",
 		"Technologies Web", "G&eacutenie des syst&egravemes interactifs" et "Techniques d'interaction web" du M2 Interactions Homme-Machine.
 	</div>
 	
 	<div id="about_drive" class="large-4 large-offset-1 columns">
-		Drive s&eacutelectionn&eacute : <br>
-		Adresse : <br>
-		Horaires d'ouverture : <br>
+		<?php if(isset($_SESSION['chosenDrive'])) :?>
+			<b><?php echo $_SESSION['chosenDrive']['nomDrive']; ?></b><br>
+			<b>Adresse :</b> <?php echo $_SESSION['chosenDrive']['numeroAdresse']; ?> <?php echo $_SESSION['chosenDrive']['rueAdresse']; ?>
+			<?php echo $_SESSION['chosenDrive']['codePostalAdresse']; ?> <?php echo $_SESSION['chosenDrive']['villeAdresse']; ?><br>
+			<b>Horaires d'ouverture :</b> 9h - 18h du Lundi au Samedi<br>
+		<?php else: ?>
+			Aucun drive n'est s&eacutelectionn&eacute.
+		<?php endif; ?>
+		<div class="row">
+			<div class="large-8 columns large-offset-1">
+				<a href="./choixDrive.php" class="small button radius">Choisir un autre drive</a>
+			</div>
+		</div>
 	</div>
 	
 	<div id="legal" class="large-2 large-offset-1 columns">
