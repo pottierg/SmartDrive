@@ -1,7 +1,12 @@
 <?php 
 	session_start();
+
+	include_once('../utils/article.php')
+	include_once('../utils/cart.php')
+
 	$content = $_SESSION['section'];
 	$titre = $_SESSION['titre'];
+	if(isset($_SESSION['cart'])) $cart = $_SESSION['cart'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,7 +24,7 @@
 <body>
 <br>
 
-<div id=header" class="row">
+<div id="header" class="row">
 
 	<div id="logo" class="large-3 columns">
 		<a href="../index.php">
@@ -114,7 +119,7 @@
 		
 		<div id="panier" class="large-2 columns clear_box_panier">
 			<div id="content_panier" class="panier auto_scroll">
-				
+				<?php if(isset($cart)) $cart->display(); ?>
 			</div>
 			<div id="checkout_button" class="row">
 				<div class="large-12 columns">
@@ -160,6 +165,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="../utils/slick/slick.min.js"></script>
 <script type="text/javascript" src="../js/foundation.min.js"></script>
+<script type="text/javascript" src="../js/cart.management.js"></script>
 <script>
 	$(document).foundation();
 	$(document).foundation('alert', 'reflow');
