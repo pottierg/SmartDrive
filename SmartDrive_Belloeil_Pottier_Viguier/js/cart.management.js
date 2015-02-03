@@ -1,6 +1,6 @@
-function addArticle(name, quantity) {
-	document.getElementById("content_panier").innerHTML += "<div>" + name + "  " + quantity + "<br/></div>";
-	$.post('../utils/addArticle.php', { name: name, quantity: quantity } )
+function addArticle(_name, _quantity) {
+	document.getElementById("content_panier").innerHTML += "<div>" + _name + "  " + _quantity + "<br/></div>";
+	$.post('../utils/addArticle.php', { name: _name, quantity: _quantity } )
 	.done(function(data) {
 		alert("Data Loaded: " + data);
 	});
@@ -12,4 +12,12 @@ function removeCart() {
 	.done(function(data) {
 		alert("Data Loaded: " + data);
 	});
+}
+
+function removeArticle(_id) {
+	$.post('../utils/removeArticle.php', {id: _id})
+	.done(function(data) {
+		alert("Data Loaded: " + data);
+	});
+	window.location.reload();
 }

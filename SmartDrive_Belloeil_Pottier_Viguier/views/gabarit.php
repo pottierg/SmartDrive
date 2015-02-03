@@ -1,12 +1,14 @@
 <?php 
 	session_start();
 
-	include_once('../utils/article.php')
-	include_once('../utils/cart.php')
+	include_once('../utils/article.php');
+	include_once('../utils/cart.php');
 
 	$content = $_SESSION['section'];
 	$titre = $_SESSION['titre'];
-	if(isset($_SESSION['cart'])) $cart = $_SESSION['cart'];
+	if(isset($_SESSION['cart'])){
+		$cart = $_SESSION['cart'];	
+	}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -119,7 +121,11 @@
 		
 		<div id="panier" class="large-2 columns clear_box_panier">
 			<div id="content_panier" class="panier auto_scroll">
-				<?php if(isset($cart)) $cart->display(); ?>
+				<?php 
+					if(isset($cart)) {
+						$cart->display();
+					}  
+				?>
 			</div>
 			<div id="checkout_button" class="row">
 				<div class="large-12 columns">

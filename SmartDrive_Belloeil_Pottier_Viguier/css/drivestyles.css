@@ -115,7 +115,7 @@ html, body {
 .clear_box_panier {
 	height: 20em;
 	color: black;
-	background-color: rgb(240,240,255);
+	background-color: #FFF;
 	border-style: solid;
 	border-width: 2px;
 	border-color: rgb(18,138,220);
