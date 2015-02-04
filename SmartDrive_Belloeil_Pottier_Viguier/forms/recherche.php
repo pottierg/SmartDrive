@@ -5,6 +5,9 @@ print_r($_POST);
 
 $_SESSION['section'] = "./rayon.php";
 $_SESSION['titre'] = "HCI Drive - Recherche";
+$_SESSION['nav'] = "Recherche";
+unset($_SESSION['navLink']);
+unset($_SESSION['nav2']);
 
 $_SESSION['recherche'] = $_POST['recherche'];
 

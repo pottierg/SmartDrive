@@ -28,5 +28,8 @@ if(isset($_POST['chosenAdresseId'])) {
 
 $_SESSION['section'] = "./home.php";
 $_SESSION['titre'] = "HCI Drive - Accueil";
+$_SESSION['nav'] = "Accueil";
+unset($_SESSION['navLink']);
+unset($_SESSION['nav2']);
 
 header("Location: ../views/gabarit.php");	

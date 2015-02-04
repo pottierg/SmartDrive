@@ -37,25 +37,32 @@ if(!mysqli_query($link, $sql)) {
 	mysqli_query($link, "ROLLBACK");
 	$_SESSION['section'] = "./echecInscription.php";
 	$_SESSION['titre'] = "HCI Drive - Echec";
+	$_SESSION['nav'] = "Echec";
+	unset($_SESSION['navLink']);
+	unset($_SESSION['nav2']);
 }
 
 $sql = "INSERT INTO `Client` (`emailClient`,`mdpClient`,`nomClient`,`prenomClient`,`Adresse_idAdresse`) ";
 $sql .= "VALUES ('".$_POST['mail']."','".md5($_POST['pwd'])."','".$_POST['nom']."','".$_POST['prenom']."',";
 $sql .= "(SELECT idAdresse FROM Adresse WHERE telephoneAdresse=".$_POST['phone']." AND rueAdresse='".$_POST['nrue']."'))";
 
-echo $sql;
-
 if(!mysqli_query($link, $sql)) {
 	// Failure case
 	mysqli_query($link, "ROLLBACK");
 	$_SESSION['section'] = "./echecInscription.html";
 	$_SESSION['titre'] = "HCI Drive - Echec";
+	$_SESSION['nav'] = "Echec";
+	unset($_SESSION['navLink']);
+	unset($_SESSION['nav2']);
 }
 else {
 	// Success case
 	mysqli_query($link, "COMMIT");
 	$_SESSION['section'] = "./home.php";
 	$_SESSION['titre'] = "HCI Drive - Accueil";
+	unset($_SESSION['nav']);
+	unset($_SESSION['navLink']);
+	unset($_SESSION['nav2']);
 }
 
-//header("Location: ../views/gabarit.php");
+header("Location: ../views/gabarit.php");

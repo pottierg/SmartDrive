@@ -81,7 +81,18 @@
 		    <div class="row collapse">
 				<ul class="breadcrumbs">
 					<li><a href="../index.php">Accueil</a></li>
-					<?php if(isset($_SESSION['nav'])) { echo "<li><a href='#'>".$_SESSION['nav']."</a></li>"; }?>
+					<?php
+					if(isset($_SESSION['nav'])) {
+						echo "<li><a href='";
+						if(isset($_SESSION['navLink']))
+							echo $_SESSION['navLink'];
+						else
+							echo "#";
+						echo "'>".$_SESSION['nav']."</a></li>";
+						
+						if(isset($_SESSION['nav2']))
+							echo "<li>".$_SESSION['nav2']."</li>";
+					}?>
 				</ul>
 			</div>
 		</div>

@@ -9,7 +9,7 @@ if(isset($_SESSION['isConnected'])) { ?>
 	<div class="large-12 columns">
 		<ul class="button-group radius">
 			<li><a href="#" class="button radius">Commandes pr&eacutec&eacutedentes</a></li>
-			<li><a href="#" class="button radius">Modifier les informations</a></li>
+			<li><a href="./gotoModifierInfos.php" class="button radius">Modifier les informations</a></li>
 		</ul>
 	</div>
 	</div>
