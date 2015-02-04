@@ -108,7 +108,7 @@
 				</li>
 				<li role="menuitem"><a href="#" class="button">Promotions</a></li>
 				<li role="menuitem"><a href="./gotoInformations.php" class="button">Informations</a></li>
-				<li role="menuitem"><a href="#" class="button">Panier</a></li>
+				<li role="menuitem"><a href="./gotoPanier.php" class="button">Panier</a></li>
 				<li role="menuitem"><a href="./gotoGestionCompte.php" class="button">Compte utilisateur</a></li>
 			</ul>
 		</div>
@@ -156,7 +156,7 @@
 		<?php endif; ?>
 		<div class="row">
 			<div class="large-8 columns large-offset-1">
-				<a href="./choixDrive.php" class="small button radius">Choisir un autre drive</a>
+				<a href="./choixDrive.php" class="small button radius" style="margin-top: 20px;">Choisir un autre drive</a>
 			</div>
 		</div>
 	</div>

@@ -22,7 +22,7 @@ if(isset($_POST['chosenAdresseId'])) {
 	}
 	else {
 		$_SESSION['chosenDrive'] = mysqli_fetch_array($req);
-		print_r($_SESSION['chosenDrive']);
+		//print_r($_SESSION['chosenDrive']);
 	}
 }
 
