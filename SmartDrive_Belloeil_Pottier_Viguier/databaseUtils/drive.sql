@@ -1,7 +1,3 @@
-/*
--- Query: 
--- Date: 2015-01-22 22:18
-*/
 INSERT INTO `Drive` (`idDrive`,`nomDrive`,`Adresse_idAdresse`) VALUES (1,'HCI Drive Toulouse',1),
 (2,'HCI Drive Toulouse',2),
 (3,'HCI Drive Toulouse',3),

@@ -51,7 +51,7 @@ $link = $db->connectToDatabase(SERVER, DATABASE_NAME, USERNAME, PASSWORD);
 												<input type="text" name="research" placeholder="Code postal, ville, adresse, ...">
 											</div>
 											<div class="small-2 columns">
-												<button type="submit" class="postfix">Search</a>
+												<input type="submit" class="button postfix" value="Go">
 											</div>
 										</div>
 									</div>

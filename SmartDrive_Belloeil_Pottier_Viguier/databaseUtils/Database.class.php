@@ -52,6 +52,10 @@
             	$this->executeQuery($sql);
             	$sql = file_get_contents('../databaseUtils/drive.sql');
             	$this->executeQuery($sql);
+            	$sql = file_get_contents('../databaseUtils/rayons.sql');
+            	$this->executeQuery($sql);
+            	$sql = file_get_contents('../databaseUtils/produits.sql');
+            	$this->executeQuery($sql);
             }
         }
       

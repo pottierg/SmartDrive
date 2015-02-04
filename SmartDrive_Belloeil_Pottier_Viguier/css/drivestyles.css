@@ -94,20 +94,53 @@ html, body {
 }
 
 .articleBackground1 {
-	background-color:#E6E6FA;
+	background-color: #EE4444;
 	border-style: solid;
-    border-width: 15px;
-    border-color: #008FB3;
+   border-width: 15px;
+   border-color: #99141B;
+}
+
+.articleBackground2 {
+	background-color: #33DD44;
+	border-style: solid;
+   border-width: 15px;
+   border-color: #006E2D;
+}
+
+.articleBackground3 {
+	background-color: #996633;
+	border-style: solid;
+   border-width: 15px;
+   border-color: #CC9966;
+}
+
+.articleBackground4 {
+	background-color: #FFCC66;
+	border-style: solid;
+   border-width: 15px;
+   border-color: #BA3B12;
+}
+
+.articleBackground5 {
+	background-color: #FFBBCC;
+	border-style: solid;
+   border-width: 15px;
+   border-color: #D41E9D;
+}
+
+.articleBackground6 {
+	background-color: #99FFFF;
+	border-style: solid;
+   border-width: 15px;
+   border-color: #008FB3;
 }
 
 .descriptionArticle{
 	color: black;
-	
 }
 
 .nomArticle{
 	color: black;
-	border-bottom: 2px solid black;
 	horizontal-align : middle;
 	width : 80%;
 }

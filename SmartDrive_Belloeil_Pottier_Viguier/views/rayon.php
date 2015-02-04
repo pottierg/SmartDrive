@@ -3,13 +3,14 @@
 $sql = "";
 
 if(isset($_SESSION['nomRayon'])) {
-	$sql = "SELECT * FROM Produit WHERE Rayon_idRayon=";
-	$sql .= "(SELECT idRayon FROM Rayon WHERE nomRayon LIKE '%".$_SESSION['nomRayon']."%')";
+	$sql = "SELECT * FROM Produit, Rayon WHERE Rayon_idRayon=";
+	$sql .= "(SELECT idRayon FROM Rayon WHERE nomRayon LIKE '%".$_SESSION['nomRayon']."%') ";
+	$sql .= "AND Produit.Rayon_idRayon=Rayon.idRayon";
 }
-
-if(isset($_SESSION['recherche'])) {
-	$sql = "SELECT * FROM Produit WHERE nomProduit LIKE '%".$_SESSION['recherche']."%' ";
-	$sql .= "OR descriptionProduit LIKE '%".$_SESSION['recherche']."%'";
+else if(isset($_SESSION['recherche'])) {
+	$sql = "SELECT * FROM Produit, Rayon WHERE nomProduit LIKE '%".$_SESSION['recherche']."%' ";
+	$sql .= "OR descriptionProduit LIKE '%".$_SESSION['recherche']."%' ";
+	$sql .= "AND Produit.Rayon_idRayon=Rayon.idRayon";
 }
 
 // Liste des articles
@@ -35,12 +36,12 @@ if($sql != "") {
 		while($row = mysqli_fetch_array($req)) {
 			?>
 				<li>
-					<div class="articleBackground1">
+					<div class="articleBackground<?php echo $row['idRayon']; ?>">
 						<center>
 							<div class="nomArticle" ><p><b><?php echo $row['nomProduit']; ?></b></p></div>
-							<div class="imageArticle"><img src="<?php echo $row['imageProduit']; ?>" alt="image article <?php echo $row['nomProduit']; ?>" height="100" width="150"></div>
+							<div class="imageArticle"><img src="../img/products/<?php echo $row['imageProduit']; ?>" alt="image article <?php echo $row['nomProduit']; ?>" height="100" width="150"></div>
 							<div class="descriptionArticle"><p><?php echo $row['descriptionProduit']; ?></p></div>
-							<div class="boutonAjouter"> <button type="button"><?php echo $row['prixProduit']; ?></button></div>
+							<div class="boutonAjouter"> <button type="button"><?php echo $row['prixProduit']; ?> &euro;</button></div>
 						</center>
 					</div>
 				</li>
