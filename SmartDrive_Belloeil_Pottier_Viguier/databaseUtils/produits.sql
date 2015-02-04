@@ -1,21 +1,7 @@
 -- -----------------------------------------------------
--- Insertion dans la table rayon
--- -----------------------------------------------------
-INSERT INTO Rayon VALUES (
-(1,'Produit Frais', NULL, '#EE4444', '#99141B'),
-(2,'Fruits et legumes', NULL, '#33DD44', '#006E2D'),(3,'Epicerie', NULL, '#996633', '#CC9966'),
-(4,'Boissons', NULL, '#FFCC66', '#BA3B12'),
-(5,'Surgeles', NULL, '#FFBBCC', '#D41E9D'),
-(6,'Hygiène', NULL, '#99FFFF', '#008FB3')
-);;
-
-
-
-
--- -----------------------------------------------------
 -- Insertion dans la table produit
 -- -----------------------------------------------------
-INSERT INTO Produit VALUES (
+INSERT INTO Produit VALUES
 (1,'Poulet', NULL, 'Le bon poulet de chez Loue', 5, 10, 1),
 (2,'Thon', NULL, 'Le bon thon de chez Petit Navire', 5, 10, 1),
 (3,'Merguez', NULL, 'Elle est bonne ma merguez', 5, 10, 1),
@@ -27,23 +13,22 @@ INSERT INTO Produit VALUES (
 (9,'Poireau', NULL, 'Poireau Allemagne', 5, 10, 2),
 (10,'Fraise', NULL, 'Fraise Espagnol', 5, 10, 2),
 (11,'Granola', NULL, 'Meilleur que les pepitos', 5, 10, 3),
-(12,'Café', NULL, 'Pour rester éveillé', 5, 10, 3),
+(12,'CafÃ©', NULL, 'Pour rester Ã©veillÃ©', 5, 10, 3),
 (13,'PastaBox', NULL, 'Des pates en conserves', 5, 10, 3),
 (14,'Moutarde', NULL, 'Exclusivement de Dijon', 5, 10, 3),
 (15,'Biscotte', NULL, 'Heudebert un vrai savoir faire', 5, 10, 3),
 (16,'Jus de tomate', NULL, 'Les meilleurs gaspachos se font avec du jus de tomate', 5, 10, 4),
-(17,'Grenadine', NULL, 'Encore meilleur avec des glaçons', 5, 10, 4),
-(18,'CocalCola', NULL, 'Même le père noël en boit', 5, 10, 4),
+(17,'Grenadine', NULL, 'Encore meilleur avec des glaÃ§ons', 5, 10, 4),
+(18,'CocalCola', NULL, 'MÃªme le pÃ¨re noÃ«l en boit', 5, 10, 4),
 (19,'Perrier', NULL, 'Perrier, c est fou', 5, 10, 4),
-(20,'Jus d orange', NULL, 'Fini les réveil difficile', 5, 10, 4),
-(21,'Poele de legumes', NULL, 'Plein de légumes, pas de jaloux', 5, 10, 5),
+(20,'Jus d orange', NULL, 'Fini les rÃ©veil difficile', 5, 10, 4),
+(21,'Poele de legumes', NULL, 'Plein de lÃ©gumes, pas de jaloux', 5, 10, 5),
 (22,'Pizza', NULL, 'Chaude ou froide on adore la manger', 5, 10, 5),
 (23,'Petit poids', NULL, 'Petit mais costaud', 5, 10, 5),
 (24,'Frites', NULL, 'McCain meilleur que bon', 5, 10, 5),
-(25,'Amuse bouche', NULL, 'Pour vos apéritifs', 5, 10, 5),
+(25,'Amuse bouche', NULL, 'Pour vos apÃ©ritifs', 5, 10, 5),
 (26,'Dentifrice', NULL, 'Une haleine toujours fraiche', 5, 10, 6),
 (27,'Shampoing', NULL, 'Des cheuveux toujours soyeux', 5, 10, 6),
 (28,'Savon', NULL, 'Pour sentir bon', 5, 10, 6),
 (29,'Mousse a raser', NULL, 'Pour les hommes et femmes a barbes', 5, 10, 6),
-(30,'Gel douche', NULL, 'Pour sentir bon', 5, 10, 6)
-);;
+(30,'Gel douche', NULL, 'Pour sentir bon', 5, 10, 6);
