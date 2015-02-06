@@ -13,6 +13,8 @@ if(isset($_SESSION['isConnected'])) {
 $req = mysqli_query($link, $sql);
 if($req != false) {
 	$data = mysqli_fetch_array($req);
+	$_SESSION['idAdresse'] = $data['idAdresse'];
+	$_SESSION['idClient'] = $data['idClient'];
 ?>
 <form method="post" action="../forms/modifier.php">
 	<fieldset>
@@ -46,7 +48,7 @@ if($req != false) {
 				<label for="pwd" class="right inline" style="color: white;">Mot de passe</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="text" id="pwd" name="pwd" value="" required>
+				<input type="password" id="pwd" name="pwd" value="" required>
 			</div>
 		</div>
 		<div class="row">

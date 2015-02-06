@@ -61,10 +61,10 @@
 	<?php else: ?>
 	<div id="login" class="large-4 columns" style="margin-top: 30px;">
 		<div class="row">
-			<div class="small-6 columns">
+			<div class="small-7 columns">
 				Bienvenue <?php echo $_SESSION['username'].' !';?>
 			</div>
-			<div class="small-6 columns">
+			<div class="small-5 columns">
 				<a href="../forms/deconnexion.php" class="small radius button">D&eacuteconnexion</a>
 			</div>
 		</div>
