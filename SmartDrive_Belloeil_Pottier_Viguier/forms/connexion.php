@@ -29,7 +29,8 @@ elseif (mysqli_num_rows($req) == 1) {
 	unset($_SESSION['nav2']);
 	
 	$_SESSION['isConnected'] = true;
-	$_SESSION['username'] = $data['prenomclient']." ".$data['nomClient'];
+	$_SESSION['username'] = $data['prenomClient']." ".$data['nomClient'];
+	$_SESSION['userMail'] = $data['emailClient'];
 }
 else {
 	// Identification failure

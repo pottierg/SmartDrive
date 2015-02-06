@@ -61,7 +61,7 @@
 	<?php else: ?>
 	<div id="login" class="large-4 columns" style="margin-top: 30px;">
 		<div class="row">
-			<div class="small-6 columns" style="margin-top: 12px;">
+			<div class="small-6 columns">
 				Bienvenue <?php echo $_SESSION['username'].' !';?>
 			</div>
 			<div class="small-6 columns">

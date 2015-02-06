@@ -8,7 +8,7 @@ $_SESSION['nav'] = "Panier";
 unset($_SESSION['navLink']);
 unset($_SESSION['nav2']);
 
-$_SESSION['nomRayon'] = "Panier";
+unset($_SESSION['nomRayon']);
 
 header("Location: ./gabarit.php");
 
