@@ -21,10 +21,16 @@ class Cart {
 	}
 
 	function display() {
-		for ($i=0; $i < $this->list->count(); $i++) { 
-			$this->list->offsetGet($i)->display();
+		foreach ($this->list as $key => $article) {
+			$article->display();
+		}
+	}
+
+	function displayRow() {
+		foreach ($this->list as $key => $article) {
+			echo "<tr>";
+			$article->displayRow($key);
+			echo "</tr>";
 		}
 	}
 }
-
-?>

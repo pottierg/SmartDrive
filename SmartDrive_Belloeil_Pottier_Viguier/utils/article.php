@@ -28,6 +28,5 @@ class Article {
 	function display() {
 		echo "<div>".$this->name." : ".$this->quantity."</div>";
 	}
-}
 
 ?>

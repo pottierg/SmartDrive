@@ -22,5 +22,3 @@ if(isset($_POST['name']) && isset($_POST['quantity'])) {
 } else {
 	echo "Variables are empty";
 }
-
-?>

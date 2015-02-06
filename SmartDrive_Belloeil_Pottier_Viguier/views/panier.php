@@ -1,7 +1,20 @@
-<?php 
+<?php
 	if(isset($_SESSION['cart'])) {
-		$cart = $_SESSION['cart'];
-		$cart->display();
+		$cart = unserialize($_SESSION['cart']);
+?>
+<table>
+	<thead>
+	<tr>
+		<th>Produit</th>
+		<th width="150">Quantity</th>
+		<th width="150">Supprimer</th>
+	</tr>
+	</thead>
+	<tbody>
+		<?php $cart->displayRow(); ?>
+	</tbody>
+</table>
+<?php
 	} else {
 		echo "<center style='margin-top: 2em;'><b>Le panier est vide</b><center>";
 	}

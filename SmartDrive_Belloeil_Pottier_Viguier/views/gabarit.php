@@ -7,7 +7,7 @@
 	$content = $_SESSION['section'];
 	$titre = $_SESSION['titre'];
 	if(isset($_SESSION['cart'])){
-		$cart = $_SESSION['cart'];	
+		$cart = unserialize($_SESSION['cart']);
 	}
 ?>
 <!DOCTYPE html>
@@ -108,16 +108,16 @@
 				<div id="rayons" class="f-dropdown large content" data-dropdown-content>
 					<ul class="large-block-grid-3">
 						<li><a href="./gotoRayonProduitsFrais.php"><img alt="Produits frais" src="../img/frais.png">Produits frais</a></li>
-						<li><a href="./gotoRayonFruits.php"><img alt="Fruits et légumes" src="../img/fruitslegumes.png">Fruits et l&eacutegumes</a></li>
+						<li><a href="./gotoRayonFruits.php"><img alt="Fruits et lï¿½gumes" src="../img/fruitslegumes.png">Fruits et l&eacutegumes</a></li>
 						<li><a href="./gotoRayonEpicerie.php"><img alt="Epicerie" src="../img/epicerie.png">Epicerie</a></li>
 						<li><a href="./gotoRayonBoissons.php"><img alt="Boissons" src="../img/boissons.png">Boissons</a></li>
-						<li><a href="./gotoRayonSurgeles.php"><img alt="Surgelés" src="../img/surgeles.png">Surgel&eacutes</a></li>
-						<li><a href="./gotoRayonHygiene.php"><img alt="Hygiène" src="../img/hygiene.png">Hygi&egravene</a></li>
+						<li><a href="./gotoRayonSurgeles.php"><img alt="Surgelï¿½s" src="../img/surgeles.png">Surgel&eacutes</a></li>
+						<li><a href="./gotoRayonHygiene.php"><img alt="Hygiï¿½ne" src="../img/hygiene.png">Hygi&egravene</a></li>
 					</ul>
 				</div>
 					
 				</li>
-				<li role="menuitem"><a href="#" class="button">Promotions</a></li>
+				<li role="menuitem"><a href="./gotoPromotion.php" class="button">Promotions</a></li>
 				<li role="menuitem"><a href="./gotoInformations.php" class="button">Informations</a></li>
 				<li role="menuitem"><a href="./gotoPanier.php" class="button">Panier</a></li>
 				<li role="menuitem"><a href="./gotoGestionCompte.php" class="button">Compte utilisateur</a></li>
