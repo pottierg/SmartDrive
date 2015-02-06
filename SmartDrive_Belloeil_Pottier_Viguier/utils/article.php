@@ -26,7 +26,12 @@ class Article {
 	}
 
 	function display() {
-		echo "<div>".$this->name." : ".$this->quantity."</div>";
+		echo "<div><b>". $this->name."</b> : ".$this->quantity."</div>";
 	}
 
-?>
+	function displayRow($i) {
+		echo "<td>$this->name</td>";
+		echo "<td>$this->quantity</td>";
+		echo "<td><div class='tiny button' onclick='removeArticle(".$i.");'>Supprimer</div></td>";
+	}
+}
