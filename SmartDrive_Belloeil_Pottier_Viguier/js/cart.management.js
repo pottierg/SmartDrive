@@ -1,9 +1,9 @@
-function addArticle(_name, _quantity) {
-	document.getElementById("content_panier").innerHTML += "<div><b>" + _name + "</b> : " + _quantity + "<br/></div>";
-	$.post('../utils/addArticle.php', { name: _name, quantity: _quantity } )
+function addArticle(_id, _name, _quantity) {
+	$.post('../utils/addArticle.php', {id: _id, name: _name, quantity: _quantity } )
 	.done(function(data) {
-		// empty
+		alert("Data Loaded: " + data);
 	});
+	window.location.reload();
 }
 
 function removeCart() {

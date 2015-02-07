@@ -1,12 +1,18 @@
 <?php
 
 class Article {
+	private $id;
 	private $name;
 	private $quantity;
 
-	function __construct($name, $quantity) {
+	function __construct($id, $name, $quantity) {
+		$this->id = $id;
 		$this->name = $name;
 		$this->quantity = $quantity;
+	}
+
+	function getId() {
+		return $this->id;
 	}
 
 	function getName() {
@@ -21,12 +27,13 @@ class Article {
 		return $this->quantity;
 	}
 
-	function setQuatity($quantity) {
+	function setQuantity($quantity) {
 		$this->quantity = $quantity;
 	}
 
-	function display() {
-		echo "<div><b>". $this->name."</b> : ".$this->quantity."</div>";
+	function display()
+	{
+		echo "<div><b>" . $this->name . "</b> : " . $this->quantity . "</div>";
 	}
 
 	function displayRow($i) {

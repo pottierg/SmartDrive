@@ -5,8 +5,8 @@
 <table>
 	<thead>
 	<tr>
-		<th>Produit</th>
-		<th width="150">Quantity</th>
+		<th width="300">Produit</th>
+		<th width="100">Quantity</th>
 		<th width="150">Supprimer</th>
 	</tr>
 	</thead>

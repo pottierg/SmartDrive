@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-print_r($_POST);
-
 $_SESSION['section'] = "./rayon.php";
 $_SESSION['titre'] = "HCI Drive - Recherche";
 $_SESSION['nav'] = "Recherche";

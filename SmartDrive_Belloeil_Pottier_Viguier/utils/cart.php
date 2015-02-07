@@ -8,7 +8,15 @@ class Cart {
 	}
 
 	function addArticle($article) {
-		$this->list->append($article);
+		$id = $article->getId();
+		if($this->list->offsetExists($id)) {
+			$quantity = $this->list->offsetGet($id)->getQuantity();
+			$this->list->offsetGet($id)->setQuantity($quantity + 1);
+			return 'ok';
+		} else {
+			$this->list->offsetSet($id, $article);
+			return 'ko';
+		}
 	}
 
 	function removeArticle($id) {
