@@ -67,9 +67,10 @@ class Cart {
 		$idCommande = $data['idCommande'];
 		
 		foreach ($this->list as $key => $article) {
-			$success = $article->registerToDatabase($idCommande);
-			if(true != $success)
+			if(false == $article->registerToDatabase($idCommande))
 				return false;
 		}
+		
+		return true;
 	}
 }
