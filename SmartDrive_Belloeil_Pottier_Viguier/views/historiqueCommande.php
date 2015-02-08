@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 include_once '../databaseUtils/constantes.php';
 include_once '../databaseUtils/Database.class.php';
@@ -17,14 +16,14 @@ $reqCommande = "";
 $reqListeProduit = "";
 
 //Je recupere l'id du client
-$sqlUser = "SELECT idClient FROM Client WHERE emailClient ='".$_SESSION['email']."'";
+$sqlUser = "SELECT idClient FROM Client WHERE emailClient ='".$_SESSION['userMail']."'";
 $reqUser = mysqli_query($link, $sqlUser);
 		
 
 //Je vais maintenant recupere les commande et l'ensemble des produits de celle ci
 if($reqUser != false){
 	$rowUser = mysqli_fetch_array($reqUser);
-	$sqlCommande = "SELECT * FROM Commande WHERE Client_idClient ='".$rowUser['idClient'];
+	$sqlCommande = "SELECT * FROM Commande WHERE Client_idClient =".$rowUser['idClient'];
 	$reqCommande = mysqli_query($link, $sqlCommande);
 }
 
@@ -38,12 +37,11 @@ if($reqCommande != false){
 ?>
 			<div class="affichageHistoriqueCommande">
 				<?php echo $rowCommande['dateCommande'];?>
-				<?php echo $rowCommande['idDrive'];?>
-				<?php echo $rowCommande['idDrive'];?>
+				<?php echo $rowCommande['Drive_idDrive'];?>
 				<!-- Je calcul le total des produits -->
 				<?php 
 				$prixTotal = 0;
-				while($rowProduit = mysqli_fetch_array($reqProduit)){
+				while($rowProduit = mysqli_fetch_array($reqListeProduit)){
 					$prixTotal = $prixTotal + $rowProduit['prixProduit'];
 				} 
 				echo $prixTotal;
