@@ -16,7 +16,7 @@ if($req != false) {
 	$_SESSION['idAdresse'] = $data['idAdresse'];
 	$_SESSION['idClient'] = $data['idClient'];
 ?>
-<form method="post" action="../forms/modifier.php">
+<form method="post" action="../forms/modifier.php" data-abide>
 	<fieldset>
 		<legend style="color: #008FB3;">A propos de vous</legend>
 		<div class="row">
@@ -24,7 +24,8 @@ if($req != false) {
 				<label for="nom" class="right inline" style="color: white;">Nom</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="text" id="nom" name="nom" value="<?php echo $data['nomClient']; ?>"  required pattern="[a-zA-Z ]+">
+				<input type="text" id="nom" name="nom" value="<?php echo $data['nomClient']; ?>" required pattern="[a-zA-Z\w]+">
+				<small class="error">Votre nom est requis.</small>
 			</div>
 		</div>
 		<div class="row">
@@ -32,7 +33,8 @@ if($req != false) {
 				<label for="prenom" class="right inline" style="color: white;">Pr&eacutenom</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="text" id="prenom" name="prenom" value="<?php echo $data['prenomClient']; ?>"  required pattern="[a-zA-Z ]+">
+				<input type="text" id="prenom" name="prenom" value="<?php echo $data['prenomClient']; ?>" required pattern="[a-zA-Z\w]+">
+				<small class="error">Votre pr&eacutenom est requis.</small>
 			</div>
 		</div>
 		<div class="row">
@@ -40,7 +42,8 @@ if($req != false) {
 				<label for="mail" class="right inline" style="color: white;">Adresse email</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="email" id="mail" name="mail" value="<?php echo $data['emailClient']; ?>"  required>
+				<input type="email" id="mail" name="mail" value="<?php echo $data['emailClient']; ?>" required>
+				<small class="error">Votre adresse mail doit &ecirctre valide.</small>
 			</div>
 		</div>
 		<div class="row">
@@ -49,6 +52,7 @@ if($req != false) {
 			</div>
 			<div class="large-9 columns">
 				<input type="password" id="pwd" name="pwd" value="" required>
+				<small class="error">Votre devez donner votre mot de passe pour modifier vos informations.</small>
 			</div>
 		</div>
 		<div class="row">
@@ -56,7 +60,8 @@ if($req != false) {
 				<label for="phone" class="right inline" style="color: white;">T&eacutel&eacutephone</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="text" id="phone" name="phone" value="<?php echo $data['telephoneAdresse']; ?>"  pattern="+{0,1}[0-9]{9,11}">
+				<input type="text" id="phone" name="phone" value="<?php echo $data['telephoneAdresse']; ?>" required pattern="\+{0,1}[0-9]{9,11}">
+				<small class="error">Votre num&eacutero est requis.</small>
 			</div>
 		</div>
 	</fieldset>
@@ -67,13 +72,15 @@ if($req != false) {
 				<label for="norue" class="right inline" style="color: white;">Num&eacutero Rue</label>
 			</div>
 			<div class="large-2 columns">
-				<input type="text" id="norue" name="norue" value="<?php echo $data['numeroAdresse']; ?>"  required pattern="[a-zA-Z0-9 ]+">
+				<input type="text" id="norue" name="norue" value="<?php echo $data['numeroAdresse']; ?>"  required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]+">
+				<small class="error">Le num&eacutero de votre domicile dans votre rue est requis.</small>
 			</div>
 			<div class="large-2 columns">
 				<label for="nrue" class="right inline" style="color: white;">Nom rue</label>
 			</div>
 			<div class="large-6 columns">
-				<input type="text" id="nrue" name="nrue" value="<?php echo $data['rueAdresse']; ?>" required pattern="[a-zA-Z0-9 ]+">
+				<input type="text" id="nrue" name="nrue" value="<?php echo $data['rueAdresse']; ?>" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]+">
+				<small class="error">Le nom de votre rue est requis.</small>
 			</div>
 		</div>
 		<div class="row">
@@ -81,13 +88,15 @@ if($req != false) {
 				<label for="ville" class="right inline" style="color: white;">Ville</label>
 			</div>
 			<div class="large-4 columns">
-				<input type="text" id="ville" name="ville" value="<?php echo $data['villeAdresse']; ?>" required pattern="[a-zA-Z0-9 ]+">
+				<input type="text" id="ville" name="ville" value="<?php echo $data['villeAdresse']; ?>" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]+">
+				<small class="error">Le nom de votre ville est requis.</small>
 			</div>
 			<div class="large-3 columns">
 				<label for="cp" class="right inline" style="color: white;">Code postal</label>
 			</div>
 			<div class="large-3 columns">
-				<input type="text" id="cp" name="cp" value="<?php echo $data['codePostalAdresse']; ?>" required pattern="[a-zA-Z0-9 ]+">
+				<input type="text" id="cp" name="cp" value="<?php echo $data['codePostalAdresse']; ?>" required pattern="[a-zA-Z0-9]+">
+				<small class="error">Votre code postal est requis.</small>
 			</div>
 		</div>
 	</fieldset>
