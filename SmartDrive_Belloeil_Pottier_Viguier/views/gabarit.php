@@ -185,7 +185,6 @@
 <script type="text/javascript" src="../js/cart.management.js"></script>
 <script>
 	$(document).foundation();
-	$(document).foundation('alert', 'reflow');
 </script>
 
 </body>

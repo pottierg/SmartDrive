@@ -6,7 +6,7 @@
 	<thead>
 	<tr>
 		<th width="300">Produit</th>
-		<th width="100">Quantity</th>
+		<th width="100">Quantit&eacute</th>
 		<th width="150">Supprimer</th>
 	</tr>
 	</thead>
