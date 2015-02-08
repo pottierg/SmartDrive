@@ -43,11 +43,11 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bddrive`.`Adresse` (
   `idAdresse` INT NOT NULL AUTO_INCREMENT,
-  `numeroAdresse` INT NOT NULL,
+  `numeroAdresse` VARCHAR(45) NOT NULL,
   `rueAdresse` VARCHAR(45) NOT NULL,
   `villeAdresse` VARCHAR(45) NOT NULL,
-  `codePostalAdresse` INT NOT NULL,
-  `telephoneAdresse` INT NOT NULL,
+  `codePostalAdresse` VARCHAR(45) NOT NULL,
+  `telephoneAdresse` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idAdresse`))
 ENGINE = InnoDB;
 

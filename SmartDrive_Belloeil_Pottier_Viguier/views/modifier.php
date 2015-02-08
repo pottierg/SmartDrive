@@ -24,7 +24,7 @@ if($req != false) {
 				<label for="nom" class="right inline" style="color: white;">Nom</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="text" id="nom" name="nom" value="<?php echo $data['nomClient']; ?>"  required pattern="[a-zA-Z]+">
+				<input type="text" id="nom" name="nom" value="<?php echo $data['nomClient']; ?>"  required pattern="[a-zA-Z ]+">
 			</div>
 		</div>
 		<div class="row">
@@ -32,7 +32,7 @@ if($req != false) {
 				<label for="prenom" class="right inline" style="color: white;">Pr&eacutenom</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="text" id="prenom" name="prenom" value="<?php echo $data['prenomClient']; ?>"  required pattern="[a-zA-Z]+">
+				<input type="text" id="prenom" name="prenom" value="<?php echo $data['prenomClient']; ?>"  required pattern="[a-zA-Z ]+">
 			</div>
 		</div>
 		<div class="row">
@@ -56,7 +56,7 @@ if($req != false) {
 				<label for="phone" class="right inline" style="color: white;">T&eacutel&eacutephone</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="text" id="phone" name="phone" value="<?php echo $data['telephoneAdresse']; ?>"  pattern="[0-9]{9,11}">
+				<input type="text" id="phone" name="phone" value="<?php echo $data['telephoneAdresse']; ?>"  pattern="+{0,1}[0-9]{9,11}">
 			</div>
 		</div>
 	</fieldset>
@@ -67,13 +67,13 @@ if($req != false) {
 				<label for="norue" class="right inline" style="color: white;">Num&eacutero Rue</label>
 			</div>
 			<div class="large-2 columns">
-				<input type="text" id="norue" name="norue" value="<?php echo $data['numeroAdresse']; ?>"  required pattern="[a-zA-Z0-9]+">
+				<input type="text" id="norue" name="norue" value="<?php echo $data['numeroAdresse']; ?>"  required pattern="[a-zA-Z0-9 ]+">
 			</div>
 			<div class="large-2 columns">
 				<label for="nrue" class="right inline" style="color: white;">Nom rue</label>
 			</div>
 			<div class="large-6 columns">
-				<input type="text" id="nrue" name="nrue" value="<?php echo $data['rueAdresse']; ?>" required pattern="[a-zA-Z0-9]+">
+				<input type="text" id="nrue" name="nrue" value="<?php echo $data['rueAdresse']; ?>" required pattern="[a-zA-Z0-9 ]+">
 			</div>
 		</div>
 		<div class="row">
@@ -81,13 +81,13 @@ if($req != false) {
 				<label for="ville" class="right inline" style="color: white;">Ville</label>
 			</div>
 			<div class="large-4 columns">
-				<input type="text" id="ville" name="ville" value="<?php echo $data['villeAdresse']; ?>" required pattern="[a-zA-Z0-9]+">
+				<input type="text" id="ville" name="ville" value="<?php echo $data['villeAdresse']; ?>" required pattern="[a-zA-Z0-9 ]+">
 			</div>
 			<div class="large-3 columns">
 				<label for="cp" class="right inline" style="color: white;">Code postal</label>
 			</div>
 			<div class="large-3 columns">
-				<input type="text" id="cp" name="cp" value="<?php echo $data['codePostalAdresse']; ?>" required pattern="[a-zA-Z0-9]+">
+				<input type="text" id="cp" name="cp" value="<?php echo $data['codePostalAdresse']; ?>" required pattern="[a-zA-Z0-9 ]+">
 			</div>
 		</div>
 	</fieldset>

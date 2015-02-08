@@ -9,11 +9,11 @@ $link = $db->connectToDatabase(SERVER, DATABASE_NAME, USERNAME, PASSWORD);
 
 if(isset($_SESSION['isConnected'])) {
 	$sql = "UPDATE Adresse SET ";
-	$sql .= "numeroAdresse=".$_POST['norue'].", ";
+	$sql .= "numeroAdresse='".$_POST['norue']."', ";
 	$sql .= "rueAdresse='".$_POST['nrue']."', ";
 	$sql .= "villeAdresse='".$_POST['ville']."', ";
-	$sql .= "codePostalAdresse=".$_POST['cp'].", ";
-	$sql .= "telephoneAdresse=".$_POST['phone']." ";
+	$sql .= "codePostalAdresse='".$_POST['cp']."', ";
+	$sql .= "telephoneAdresse='".$_POST['phone']."' ";
 	$sql .= "WHERE idAdresse=".$_SESSION['idAdresse'];
 	
 	if(!mysqli_query($link, $sql)) {
