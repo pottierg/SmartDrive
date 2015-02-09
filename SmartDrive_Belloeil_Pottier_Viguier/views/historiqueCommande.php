@@ -72,8 +72,8 @@ if($reqCommande != false){
 				
 				<div class="row" style="position: relative; left: 20%;">
 					<div class="large-6 columns">
-						<form action="#" method="post">
-							<input type="hidden" value="<?php echo $rowCommande['idCommande'];?>">
+						<form action="gotoHome.php" method="post">
+							<input type="hidden" name="idCommande" value="<?php echo $rowCommande['idCommande'];?>">
 							<input type="submit" class="button radius" value="Recommander">
 						</form>
 					</div>

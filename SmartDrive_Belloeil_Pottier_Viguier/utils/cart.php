@@ -45,6 +45,11 @@ class Cart {
 	function isEmpty() {
 		return $this->list->count() == 0;
 	}
+
+	function removeCart() {
+		unset($this->list);
+		$this->list = new ArrayObject();
+	}
 	
 	function registerToDatabase($idDrive, $idClient) {
 		include_once '../databaseUtils/constantes.php';
