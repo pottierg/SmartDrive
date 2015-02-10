@@ -24,7 +24,7 @@ if($req != false) {
 				<label for="nom" class="right inline" style="color: white;">Nom</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="text" id="nom" name="nom" value="<?php echo $data['nomClient']; ?>" required pattern="[a-zA-Z\w]+">
+				<input type="text" id="nom" name="nom" value="<?php echo $data['nomClient']; ?>" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]*">
 				<small class="error">Votre nom est requis.</small>
 			</div>
 		</div>
@@ -33,7 +33,7 @@ if($req != false) {
 				<label for="prenom" class="right inline" style="color: white;">Pr&eacutenom</label>
 			</div>
 			<div class="large-9 columns">
-				<input type="text" id="prenom" name="prenom" value="<?php echo $data['prenomClient']; ?>" required pattern="[a-zA-Z\w]+">
+				<input type="text" id="prenom" name="prenom" value="<?php echo $data['prenomClient']; ?>" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]*">
 				<small class="error">Votre pr&eacutenom est requis.</small>
 			</div>
 		</div>
@@ -72,14 +72,14 @@ if($req != false) {
 				<label for="norue" class="right inline" style="color: white;">Num&eacutero Rue</label>
 			</div>
 			<div class="large-2 columns">
-				<input type="text" id="norue" name="norue" value="<?php echo $data['numeroAdresse']; ?>"  required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]+">
+				<input type="text" id="norue" name="norue" value="<?php echo $data['numeroAdresse']; ?>"  required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]*">
 				<small class="error">Le num&eacutero de votre domicile dans votre rue est requis.</small>
 			</div>
 			<div class="large-2 columns">
 				<label for="nrue" class="right inline" style="color: white;">Nom rue</label>
 			</div>
 			<div class="large-6 columns">
-				<input type="text" id="nrue" name="nrue" value="<?php echo $data['rueAdresse']; ?>" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]+">
+				<input type="text" id="nrue" name="nrue" value="<?php echo $data['rueAdresse']; ?>" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]*">
 				<small class="error">Le nom de votre rue est requis.</small>
 			</div>
 		</div>
@@ -88,7 +88,7 @@ if($req != false) {
 				<label for="ville" class="right inline" style="color: white;">Ville</label>
 			</div>
 			<div class="large-4 columns">
-				<input type="text" id="ville" name="ville" value="<?php echo $data['villeAdresse']; ?>" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]+">
+				<input type="text" id="ville" name="ville" value="<?php echo $data['villeAdresse']; ?>" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9\w]*">
 				<small class="error">Le nom de votre ville est requis.</small>
 			</div>
 			<div class="large-3 columns">

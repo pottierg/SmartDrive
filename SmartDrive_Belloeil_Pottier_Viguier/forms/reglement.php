@@ -16,15 +16,12 @@ if($req != false) {
 	$idclient = $data['idClient'];
 }
 else {
-	echo "select client echoue";
-	/*
 	$_SESSION['titre'] = "HCI Drive - Commande";
 	$_SESSION['section'] = "./commandeKO.html";
 	$_SESSION['nav'] = "Commande";
 	unset($_SESSION['navLink']);
 	unset($_SESSION['nav2']);
 	header("Location: ../views/gabarit.php");
-	*/
 }
 
 
