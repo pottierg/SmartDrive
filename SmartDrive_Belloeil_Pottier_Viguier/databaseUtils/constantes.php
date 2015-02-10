@@ -1,8 +1,8 @@
 <?php
-// Base de données
+// Base de donnï¿½es
 define("SERVER", "localhost");
 define("USERNAME", "root");
-define("PASSWORD", "");
+define("PASSWORD", "root");
 define("DATABASE_NAME", "bddrive");
 
 ?>

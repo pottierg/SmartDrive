@@ -22,8 +22,12 @@ class Cart {
 
 	function removeArticle($id) {
 		if($this->list->offsetExists($id)) {
-			$this->price -= $this->list->offsetGet($id)->getPrice();
-			$this->list->offsetUnset($id);
+			$article = $this->list->offsetGet($id);
+			$article->setQuantity($article->getQuantity() - 1);
+			$this->price -= $article->getPrice();
+			if($article->getQuantity() == 0) {
+				$this->list->offsetUnset($id);
+			}
 			return true;
 		} else {
 			return false;
