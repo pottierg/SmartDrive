@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include_once 'article.php';
-include_once 'cart.php';
+include_once './article.php';
+include_once './cart.php';
 
 if(isset($_POST['name']) and isset($_POST['quantity']) and isset($_POST['id']) and isset($_POST['price'])) {
 
