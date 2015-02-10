@@ -140,7 +140,7 @@
 			</div>
 			<div id="checkout_button" class="row">
 				<div class="large-12 columns">
-					<a href="./gotoReglement.php" class="button radius expand mid_align">R&eacutegler</a>
+					<a href="./gotoReglement.php" class="button radius expand mid_align">R&eacutegler: <?php echo $cart->getPrice() ?> &euro;</a>
 				</div>
 			</div>
 		</div>

@@ -2,25 +2,27 @@
 
 class Cart {
 	private $list;
+	private $price;
 
 	function __construct() {
+		$this->price = 0;
 		$this->list = new arrayObject();
 	}
 
 	function addArticle($article) {
+		$this->price += $article->getPrice();
 		$id = $article->getId();
 		if($this->list->offsetExists($id)) {
 			$quantity = $this->list->offsetGet($id)->getQuantity();
 			$this->list->offsetGet($id)->setQuantity($quantity + 1);
-			return 'ok';
 		} else {
 			$this->list->offsetSet($id, $article);
-			return 'ko';
 		}
 	}
 
 	function removeArticle($id) {
 		if($this->list->offsetExists($id)) {
+			$this->price -= $this->list->offsetGet($id)->getPrice();
 			$this->list->offsetUnset($id);
 			return true;
 		} else {
@@ -48,6 +50,7 @@ class Cart {
 
 	function removeCart() {
 		unset($this->list);
+		$this->price = 0;
 		$this->list = new ArrayObject();
 	}
 	
@@ -77,5 +80,9 @@ class Cart {
 		}
 		
 		return true;
+	}
+
+	function getPrice() {
+		return $this->price;
 	}
 }

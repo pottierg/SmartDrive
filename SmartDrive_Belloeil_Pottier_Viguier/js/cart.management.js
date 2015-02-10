@@ -1,5 +1,5 @@
-function addArticle(_id, _name, _quantity) {
-	$.post('../utils/addArticle.php', {id: _id, name: _name, quantity: _quantity } )
+function addArticle(_id, _name, _quantity, _price) {
+	$.post('../utils/addArticle.php', {id: _id, name: _name, quantity: _quantity, price: _price } )
 	.done(function(data) {
 		// alert("Data Loaded: " + data);
 	});

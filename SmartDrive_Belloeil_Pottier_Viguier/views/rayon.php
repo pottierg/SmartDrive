@@ -42,7 +42,7 @@ if($sql != "") {
 							<div class="imageArticle"><img src="../img/products/<?php echo $row['imageProduit']; ?>" alt="image article <?php echo $row['nomProduit']; ?>" height="100" width="150"></div>
 							<div class="descriptionArticle"><p><?php echo $row['descriptionProduit']; ?></p></div>
 							<div class="boutonAjouter">
-								<button type="button" onclick="addArticle(<?php echo $row['idProduit'] . ',\'' . $row['nomProduit'] . '\'';?>, 1)">
+								<button type="button" onclick="addArticle(<?php echo $row['idProduit'] . ',\'' . $row['nomProduit'] . '\'';?>, 1, <?php echo $row['prixProduit'] ?>)">
 									<?php echo $row['prixProduit']; ?> &euro;
 								</button>
 							</div>

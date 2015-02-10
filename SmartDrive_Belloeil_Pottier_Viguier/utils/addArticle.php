@@ -5,7 +5,7 @@ session_start();
 include_once 'article.php';
 include_once 'cart.php';
 
-if(isset($_POST['name']) and isset($_POST['quantity']) and isset($_POST['id'])) {
+if(isset($_POST['name']) and isset($_POST['quantity']) and isset($_POST['id']) and isset($_POST['price'])) {
 
 	if(isset($_SESSION['cart'])) {
 		$cart = unserialize($_SESSION['cart']);
@@ -13,7 +13,7 @@ if(isset($_POST['name']) and isset($_POST['quantity']) and isset($_POST['id'])) 
 		$cart = new Cart();
 	}
 
-	$article = new Article($_POST['id'], $_POST['name'], $_POST['quantity']);
+	$article = new Article($_POST['id'], $_POST['name'], $_POST['quantity'], $_POST['price']);
 	echo($cart->addArticle($article));
 	$_SESSION['cart'] = serialize($cart);
 

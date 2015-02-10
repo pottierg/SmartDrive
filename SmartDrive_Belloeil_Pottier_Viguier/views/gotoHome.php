@@ -15,7 +15,8 @@ if(isset($_POST['idCommande'])) {
     if($req = mysqli_query($link, $sql)) {
         $cart = new Cart();
         while($row = mysqli_fetch_array($req)) {
-            $article = new Article($row['idProduit'], $row['nomProduit'], $row['nombreProduitCommande']);
+            $totalPrice = $row['nombreProduitCommande'] * $row['prixProduit'];
+            $article = new Article($row['idProduit'], $row['nomProduit'], $row['nombreProduitCommande'], $totalPrice);
             $cart->addArticle($article);
         }
         $_SESSION['cart'] = serialize($cart);

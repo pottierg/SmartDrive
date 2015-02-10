@@ -4,11 +4,13 @@ class Article {
 	private $id;
 	private $name;
 	private $quantity;
+	private $price;
 
-	function __construct($id, $name, $quantity) {
+	function __construct($id, $name, $quantity, $price) {
 		$this->id = $id;
 		$this->name = $name;
 		$this->quantity = $quantity;
+		$this->price = $price;
 	}
 
 	function getId() {
@@ -29,6 +31,14 @@ class Article {
 
 	function setQuantity($quantity) {
 		$this->quantity = $quantity;
+	}
+
+	function getPrice() {
+		return $this->price;
+	}
+
+	function setPrice($price) {
+		$this->price = $price;
 	}
 
 	function display()
